@@ -16,6 +16,7 @@ const dia = new Date ()
 fecha.innerHTML = dia.toLocaleDateString('es-AR',{weekday: 'long', month: 'short', day:'numeric',year: 'numeric'})
 
 
+
 function agregarTarea( tarea,id,realizado,eliminado) {
     if(eliminado) {return}  
     const hecho = realizado ? marcado : desmarcado 
@@ -43,6 +44,10 @@ function tareaRealizada(element) {
 
 
 function tareaEliminada(element){
+	Swal.fire({
+		icon: 'error',
+		title: 'Tarea eliminada',
+	  })
     element.parentNode.parentNode.removeChild(element.parentNode)
     list[element.id].eliminado = true
 }
