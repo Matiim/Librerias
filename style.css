@@ -5,7 +5,8 @@
 }
 
 body {
-    background:#BDD4E7; 	
+	background-color: #607D8B;
+	
     height: 100vh;   
     font-family: 'Prompt', sans-serif;
 }
@@ -16,7 +17,9 @@ body {
     width: 450px;
     height: 330px;
     margin: 15px auto;	
-	background-color:#8693AB;
+	background-color: #9E9E9E;
+
+
 }
 
 /*PERFIL Y FECHA*/
@@ -38,7 +41,7 @@ body {
 /*AGREGAR TAREA*/
 
 .agregar-tarea {
-    background-color: white;
+    background-color: rgb(167, 167, 167);
     border-radius: 25px;
     height: 65px;
     display: flex;
@@ -53,7 +56,7 @@ body {
     height: 100%;
     border-radius: 20px;
     border: none;
-    background-color:white;
+    background-color:rgb(167, 167, 167);
     padding-left: 20px;
 }
 
@@ -86,7 +89,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #8693AB;
+	background-color: rgb(167, 167, 167);
     border-radius: 15px;
     padding: 10px;
     color: black;

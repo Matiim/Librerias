@@ -10,11 +10,8 @@ let list
 let id 
 
 
-
-
 const dia = new Date ()
 fecha.innerHTML = dia.toLocaleDateString('es-AR',{weekday: 'long', month: 'short', day:'numeric',year: 'numeric'})
-
 
 
 function agregarTarea( tarea,id,realizado,eliminado) {
@@ -28,10 +25,16 @@ function agregarTarea( tarea,id,realizado,eliminado) {
                         </li>
 					 `
     lista.insertAdjacentHTML("beforeend",elemento)
+	
+	fetch('tareas.json')
+	.then(function(res){
+		return res.json();
+	})
+	.then(function(data){
+		console.log(data);
+	})
+	
 }
-
-
-
 
 function tareaRealizada(element) {
     element.classList.toggle(marcado)

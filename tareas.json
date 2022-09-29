@@ -1,0 +1,14 @@
+[
+	{
+		"id"     : 1,
+		"tarea" : "Pasear perro"
+	},
+	{
+		"id"     : 2,
+		"tarea" : "Comprar pan"
+	},
+	{
+		"id"     : 3,
+		"tarea" : "Comprar comida"
+	}
+]
