@@ -3,11 +3,13 @@ const elemento = document.querySelector('#elemento')
 const botonEnter = document.querySelector('#boton-enter')
 const lista = document.querySelector('#lista')
 const input = document.querySelector('#input')
+const contenido = document.querySelector('#contenido')
 const marcado = 'fa-check-circle'
 const desmarcado = 'fa-circle'
 const tachado = 'line-through'
 let list 
 let id 
+
 
 
 const dia = new Date ()
@@ -16,25 +18,42 @@ fecha.innerHTML = dia.toLocaleDateString('es-AR',{weekday: 'long', month: 'short
 
 function agregarTarea( tarea,id,realizado,eliminado) {
     if(eliminado) {return}  
-    const hecho = realizado ? marcado : desmarcado 
-    const linea = realizado ? tachado : '' 
+	const hecho = realizado ? marcado : desmarcado 
+	const linea = realizado ? tachado : '' 
     const elemento = `  <li id="elemento">
                 		<i class="far ${hecho}" data="realizado" id="${id}"></i>
                         <p class="text ${linea}">${tarea}</p>
                         <i class="fas fa-trash de" data="eliminado" id="${id}"></i> 
                         </li>
 					 `
-    lista.insertAdjacentHTML("beforeend",elemento)
-	
+    lista.insertAdjacentHTML("beforeend",elemento); 
+ }
+
+
+ function traer(){
 	fetch('tareas.json')
-	.then(function(res){
-		return res.json();
+	.then(res => res.json())
+	.then(datos =>  {
+		tabla(datos)
 	})
-	.then(function(data){
-		console.log(data);
-	})
-	
-}
+ }
+ 
+ function tabla(datos){
+	contenido.innerHTML=''
+	for(let valor of datos){
+		contenido.innerHTML += `  
+								<li id="elemento">
+								
+								${valor.tarea}
+								</li>
+	 							`
+	}
+ }
+
+
+
+
+
 
 function tareaRealizada(element) {
     element.classList.toggle(marcado)

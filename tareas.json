@@ -1,14 +1,14 @@
 [
 	{
 		"id"     : 1,
-		"tarea" : "Pasear perro"
+		"tarea" : "No realizada: Pasear perro"
 	},
 	{
 		"id"     : 2,
-		"tarea" : "Comprar pan"
+		"tarea" : " Realizada: c̶o̶m̶p̶r̶a̶r̶ ̶p̶a̶n̶ "
 	},
 	{
 		"id"     : 3,
-		"tarea" : "Comprar comida"
+		"tarea" : "Eliminada:  "
 	}
 ]
